@@ -1,0 +1,34 @@
+====================================================
+      AEGIS SYSTEM TROUBLESHOOTER - SETUP GUIDE
+====================================================
+
+Follow these steps to run the troubleshooter for the first time:
+
+1. PREREQUISITES:
+   - Ensure you have Node.js installed (v16 or higher recommended).
+   - The application requires Administrator privileges to perform deep system scans.
+
+2. INSTALLATION:
+   - Open a terminal (PowerShell or Command Prompt) in this folder.
+   - Run the following command to install dependencies:
+     
+     npm install
+
+3. RUNNING THE APPLICATION:
+   - To start the application in development mode, run:
+
+     npm run dev
+
+4. USAGE TIPS:
+   - RUN AS ADMIN: For best results, run your terminal as Administrator before starting the app.
+   - SELECTING AN APP: Use the "Select EXE" button to diagnose issues with a specific program.
+   - FIX GUIDES: If an issue is found, click "Open Fix Guide" for step-by-step instructions.
+   - REPORTS: Use the Export buttons (TXT, JSON, HTML) to save your results for support or later review.
+
+5. TROUBLESHOOTING THE TROUBLESHOOTER:
+   - If the scan hangs, ensure no other high-security tools are blocking PowerShell.
+   - Use "Developer Mode" in the Results screen to see raw error logs.
+
+----------------------------------------------------
+Aegis Security Solutions - Professional Diagnostics
+----------------------------------------------------

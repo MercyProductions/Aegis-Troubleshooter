@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "name": "Example Developer Requirements",
+  "description": "Example rules that turn detected troubleshooter checks into app-specific launch requirements.",
+  "requirements": [
+    {
+      "id": "cpu-virtualization-required",
+      "checkId": "cpu-virtualization-firmware",
+      "requiredStatus": "passed",
+      "severity": "critical",
+      "label": "CPU virtualization must be enabled",
+      "impact": "This app needs Intel VT-x or AMD-V enabled before it can launch its VM-backed runtime.",
+      "recommendation": "Enable Intel VT-x or AMD-V in BIOS/UEFI, then run the troubleshooter again."
+    },
+    {
+      "id": "vbs-required",
+      "checkId": "vbs-status",
+      "allowedStatuses": ["passed"],
+      "severity": "high",
+      "label": "VBS must be running",
+      "impact": "This app expects Windows virtualization-based security to be active.",
+      "recommendation": "Enable VBS and restart Windows."
+    },
+    {
+      "id": "hyper-v-must-be-off-example",
+      "checkId": "hyper-v-platform",
+      "allowedStatuses": ["warning"],
+      "severity": "critical",
+      "label": "Hyper-V must be disabled",
+      "impact": "Some anti-cheat or driver stacks require Hyper-V to be off. This example intentionally accepts the default disabled warning state.",
+      "recommendation": "Disable Hyper-V if this application cannot run while the Windows hypervisor is enabled."
+    }
+  ]
+}
